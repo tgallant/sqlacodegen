@@ -1097,9 +1097,7 @@ class DeclarativeGenerator(TablesGenerator):
                     if inflected_name:
                         preferred_name = inflected_name
 
-        relationship.name = self.find_free_name(
-            preferred_name, global_names, local_names
-        )
+        relationship.name = preferred_name
 
     def render_models(self, models: list[Model]) -> str:
         rendered: list[str] = []
